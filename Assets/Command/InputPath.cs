@@ -7,7 +7,9 @@ public class InputPath : MonoBehaviour
     Camera maincam;
     RaycastHit hitInfo;
     public Transform wallfab;
-    
+    public Transform slowE;
+    public Transform fastE;
+
 
 
     // Start is called before the first frame update

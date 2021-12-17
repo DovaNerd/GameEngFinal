@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Factory : MonoBehaviour
 {
+    #region singleton
     public Transform slowE;
     public Transform fastE;
-    public Vector3 pos;
-    public Vector3 pos2;
+    Camera maincam;
+    RaycastHit hitInfo;
     bool spawn;
 
 
@@ -16,7 +17,6 @@ public class Factory : MonoBehaviour
     {
         void Execute(Transform pre, Vector3 position);
     }
-
 
     public class FastEnemy : Enemy
     {
@@ -34,17 +34,30 @@ public class Factory : MonoBehaviour
             Instantiate(pre, position, Quaternion.identity);
         }
     }
+    private void Awake()
+    {
+        maincam = Camera.main;
+    }
 
     private void Update()
     {
-        //This is just simple toggle to spawn the enemies on either side of the level
-        if (Input.GetKeyDown("1"))
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            new FastEnemy().Execute(fastE, pos);
+            Ray ray = maincam.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out hitInfo, Mathf.Infinity))
+            {
+                new SlowEnemy().Execute(slowE, hitInfo.point);
+            }
         }
-        else if (Input.GetKeyDown("2"))
+        if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            new SlowEnemy().Execute(slowE, pos2);
+            Ray ray = maincam.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out hitInfo, Mathf.Infinity))
+            {
+                new FastEnemy().Execute(fastE, hitInfo.point);
+            }
         }
     }
+    #endregion
+
 }

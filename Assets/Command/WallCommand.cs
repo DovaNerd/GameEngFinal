@@ -5,17 +5,17 @@ using UnityEngine;
 public class WallCommand : ICommand
 {
 
-    Vector3 position;
-    Transform wall;
+    private Vector3 position;
+    private Transform Wall;
 
     public WallCommand(Vector3 position, Transform wall)
     {
         this.position = position;
-        this.wall = wall;
+        this.Wall = wall;
     }
 
     public void Execute()
     {
-        WallPlacer.PlaceWall(position, wall);
+        WallPlacer.PlaceWall(position, Wall);
     }
 }

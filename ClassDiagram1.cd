@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CommandInvoker">
+    <Position X="3.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAACAAAAAAAAAABAAAEAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Command\CommandInvoker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InputPath">
+    <Position X="6.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAIAQQAAAAAAAAAAAABAAAAAAgAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Command\InputPath.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KeyPlacer">
+    <Position X="8.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Assets\Command\old\KeyPlacer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlaceKeyCommand" BaseTypeListCollapsed="true">
+    <Position X="0.75" Y="2.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAQAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Command\old\PlaceKeyCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WallCommand" BaseTypeListCollapsed="true">
+    <Position X="5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAIAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Command\WallCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WallPlacer">
+    <Position X="8.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Command\WallPlacer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="ICommand">
+    <Position X="1.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Command\ICommand.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
